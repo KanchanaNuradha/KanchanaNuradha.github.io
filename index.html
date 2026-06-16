@@ -1,214 +1,682 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Kanchana G. Nuradha </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#07070b" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f7f7fb" media="(prefers-color-scheme: light)" />
+  <meta name="color-scheme" content="dark light" />
 
-  <meta name="description" content="Kanchana G Nuradha Portfolio" />
-  <meta name="keywords" content="Kanchana Nuradha,Kanchana Galappaththi,Kanchana,Nuradha,Web Developer,Lankan Developer,SLdev,fullstack dev" />
+  <title>Kanchana Nuradha — Software Engineer</title>
+  <meta name="description" content="Kanchana Nuradha — Full-Stack Software Engineer based in Athurugiriya, Sri Lanka. Building enterprise platforms, mobile apps, and intelligent delivery systems with Next.js, Node.js, and modern web tech." />
+  <meta name="author" content="Kanchana Nuradha Galappaththi" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
-  <link rel="manifest" href="/fav/site.webmanifest">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/css/main.css">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kanchana Nuradha — Software Engineer" />
+  <meta property="og:description" content="Full-Stack Software Engineer. Enterprise platforms, mobile apps & delivery systems." />
+  <meta property="og:url" content="https://kanchananuradha.github.io/" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png" />
+  <link rel="shortcut icon" href="fav/favicon.ico" />
+  <link rel="manifest" href="fav/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
-
 <body>
+  <!-- Animated background -->
+  <div class="bg-blanket" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--a" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--b" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--c" aria-hidden="true"></div>
 
-  <!-- notification for small viewports and landscape oriented smartphones -->
-  <div class="device-notification">
-    <a class="device-notification--logo" href="#0">
-      <img src="assets/img/logo.png" alt="Kanchana G.">
-      <p>Kanchana G.</p>
-    </a>
-  </div>
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand" aria-label="Kanchana Nuradha home">
+        <span class="nav__brand-mark">KN</span>
+        <span class="nav__brand-name">Kanchana<span class="nav__brand-dot">.</span></span>
+      </a>
 
-  <div class="perspective effect-rotate-left">
-    <div class="container">
-      <div class="outer-nav--return"></div>
-      <div id="viewport" class="l-viewport">
-        <div class="l-wrapper">
-          <header class="header">
-            <a class="header--logo" href="#0">
-              <img src="assets/img/logo.png" alt="Kanchana G.">
-              <p>Kanchana G.</p>
-            </a>
-            <button class="header--cta cta">Hire Me</button>
-            <div class="header--nav-toggle">
-              <span></span>
-            </div>
-          </header>
-          <nav class="l-side-nav">
-            <ul class="side-nav">
-              <li class="is-active"><span>Home</span></li>
-              <li><span>Works</span></li>
-              <li><span>About</span></li>
-              <li><span>Contact</span></li>
-              <li><span>Hire Me</span></li>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about" data-nav>About</a>
+        <a href="#skills" data-nav>Skills</a>
+        <a href="#work" data-nav>Work</a>
+        <a href="#projects" data-nav>Projects</a>
+        <a href="#experience" data-nav>Experience</a>
+        <a href="#contact" data-nav>Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn--primary btn--sm nav__cta">
+          <span>Get in touch</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+
+        <button class="nav__burger" id="navBurger" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__status" data-reveal>
+          <span class="hero__status-dot" aria-hidden="true"></span>
+          <span>Available for projects · Athurugiriya, Sri Lanka</span>
+        </div>
+
+        <h1 class="hero__title" data-reveal>
+          <span class="hero__title-line">Hi, I'm <span class="grad-text">Kanchana Nuradha</span></span>
+          <span class="hero__title-line hero__title-line--sub">Building resilient, real-world<br/> software systems.</span>
+        </h1>
+
+        <p class="hero__lede" data-reveal>
+          Full-Stack Software Engineer with a decade of experience designing and shipping
+          enterprise platforms, mobile apps and delivery-tech infrastructure for production
+          businesses. Currently engineering at <a href="https://fixel.lk" target="_blank" rel="noopener" class="link-hover">Fixel Inc.</a>
+        </p>
+
+        <div class="hero__actions" data-reveal>
+          <a href="#projects" class="btn btn--primary">
+            <span>View selected work</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="mailto:kanchanag@fixel.lk" class="btn btn--ghost">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>kanchanag@fixel.lk</span>
+          </a>
+        </div>
+
+        <dl class="hero__stats" data-reveal>
+          <div class="hero__stat">
+            <dt>Years building</dt>
+            <dd><span class="num">10</span><span class="unit">+</span></dd>
+          </div>
+          <div class="hero__stat">
+            <dt>Production systems</dt>
+            <dd><span class="num">25</span><span class="unit">+</span></dd>
+          </div>
+          <div class="hero__stat">
+            <dt>Role </dt>
+            <dd class="hero__stat-stack"><span class="unit">Senior Software Engineer</span></dd>
+          </div>
+        </dl>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Scroll to next section">
+        <span class="hero__scroll-track"><span class="hero__scroll-thumb"></span></span>
+        <span class="hero__scroll-label">scroll</span>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <span class="section__eyebrow"><span class="dot"></span>About</span>
+          <h2 class="section__title">Engineer at heart, <span class="grad-text">builder by trade.</span></h2>
+        </header>
+
+        <div class="about" data-reveal>
+          <div class="about__copy">
+            <p>
+              I'm a Sri-Lankan software engineer who has spent the last decade shipping
+              real systems for real businesses — from enterprise gas distribution
+              platforms and dealer networks to mobile billing apps used daily by
+              delivery teams in the field.
+            </p>
+            <p>
+              I care a lot about clean architecture, tight feedback loops, and software
+              that doesn't break at 2 a.m. My favourite problems live at the messy
+              intersection of operations, hardware and the web — routing, logistics,
+              payments, and offline-first mobile workflows.
+            </p>
+            <p>
+              Outside of code, I read about distributed systems, fiddle with tooling,
+              and obsess over good developer experience.
+            </p>
+          </div>
+
+          <aside class="about__card">
+            <h3 class="about__card-title">Quick facts</h3>
+            <ul class="about__facts">
+              <li><span>Based in</span><strong>Athurugiriya, Sri Lanka</strong></li>
+              <li><span>Role</span><strong>Software Engineer · Fixel Inc.</strong></li>
+              <li><span>Experience</span><strong>10+ years full-stack</strong></li>
+              <li><span>Education</span><strong>M.PM · Asia e University</strong></li>
+              <li><span>Focus</span><strong>Web · Mobile · Delivery tech</strong></li>
+              <li><span>Open to</span><strong>Consulting · Contract work</strong></li>
             </ul>
-          </nav>
-          <ul class="l-main-content main-content">
-            <li class="l-section section section--is-active">
-              <div class="intro">
-                <div class="intro--banner">
-                  <h1>Kanchana<br>G. Nuradha</h1>
-                  <button class="cta">Hire Me
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                      <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                        <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
-                      </g>
-                    </svg>
-                    <span class="btn-background"></span>
-                  </button>
-                  <img src="assets/img/introduction-visual.png" alt="Welcome">
-                </div>
-                <div class="intro--options">
-                  <a href="#0">
-                    <h3>Web &amp; Dev</h3>
-                    <p>Years of Web Development</p>
-                  </a>
-                  <a href="#0">
-                    <h3>Full Stack Dev</h3>
-                    <p>Full stack solutions and consultancy.</p>
-                  </a>
-                  <a href="#0">
-                    <h3>Dev Ops</h3>
-                    <p>Dev Ops solutions and Architecture.</p>
-                  </a>
-                </div>
-              </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <span class="section__eyebrow"><span class="dot"></span>Skills</span>
+          <h2 class="section__title">The toolbox.</h2>
+          <p class="section__lede">A focused stack I've sharpened across mobile, web and backend over the years.</p>
+        </header>
+
+        <div class="skills" data-reveal>
+          <article class="skill-card">
+            <div class="skill-card__head">
+              <span class="skill-card__num">01</span>
+              <h3>Frontend & Mobile</h3>
+            </div>
+            <ul class="skill-list">
+              <li>Next.js</li>
+              <li>React</li>
+              <li>Framework7</li>
+              <li>Capacitor</li>
+              <li>Tailwind CSS</li>
+              <li>TypeScript</li>
+              <li>HTML &amp; CSS</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card__head">
+              <span class="skill-card__num">02</span>
+              <h3>Backend & APIs</h3>
+            </div>
+            <ul class="skill-list">
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>REST APIs</li>
+              <li>JWT &amp; Auth</li>
+              <li>WebSockets</li>
+              <li>CyberSource</li>
+              <li>Webhook design</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card__head">
+              <span class="skill-card__num">03</span>
+              <h3>Data & ORM</h3>
+            </div>
+            <ul class="skill-list">
+              <li>MySQL</li>
+              <li>Prisma</li>
+              <li>SQL modeling</li>
+              <li>Migrations</li>
+              <li>Indexing &amp; perf</li>
+              <li>Caching</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card__head">
+              <span class="skill-card__num">04</span>
+              <h3>Platform & Ops</h3>
+            </div>
+            <ul class="skill-list">
+              <li>Vercel</li>
+              <li>Hetzner Cloud</li>
+              <li>Linux servers</li>
+              <li>Nginx</li>
+              <li>CI/CD</li>
+              <li>Monitoring</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card__head">
+              <span class="skill-card__num">05</span>
+              <h3>Geo & Logistics</h3>
+            </div>
+            <ul class="skill-list">
+              <li>Google Routes API</li>
+              <li>Google Maps APIs</li>
+              <li>OSRM</li>
+              <li>Geospatial queries</li>
+              <li>Route optimization</li>
+              <li>Fleet tracking</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card__head">
+              <span class="skill-card__num">06</span>
+              <h3>Integrations</h3>
+            </div>
+            <ul class="skill-list">
+              <li>Payment gateways</li>
+              <li>Thermal printers</li>
+              <li>SMS providers</li>
+              <li>VideoCipher</li>
+              <li>Push notifications</li>
+              <li>3rd-party SDKs</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured projects -->
+    <section class="section" id="work">
+      <div class="container">
+        <header class="section__head section__head--row" data-reveal>
+          <div>
+            <span class="section__eyebrow"><span class="dot"></span>Selected Work</span>
+            <h2 class="section__title">Things I've built<br/><span class="grad-text">that ship every day.</span></h2>
+          </div>
+          <p class="section__lede section__lede--side">
+            A focused look at six enterprise platforms — the systems I'm most proud of shipping,
+            running in production today.
+          </p>
+        </header>
+
+        <div class="featured">
+          <!-- 01 -->
+          <article class="featured__item" data-reveal>
+            <div class="featured__index">
+              <span>01</span>
+            </div>
+            <div class="featured__body">
+              <span class="featured__meta">Production · v3 → v4 · 2024 — 2026</span>
+              <h3 class="featured__title">Enterprise Gas Distribution Platform</h3>
+              <p class="featured__desc">
+                End-to-end platform for a national LP-gas distributor — covering dealers,
+                customers, deliveries, billing and field operations. Architected the v3
+                backend and led the migration to a v4 admin built on Next.js + Prisma,
+                running across a country-wide dealer network with thousands of daily orders.
+              </p>
+              <ul class="tags">
+                <li>Next.js</li><li>Framework7</li><li>Capacitor</li><li>Node.js</li><li>Express</li><li>MySQL</li><li>Prisma</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 02 -->
+          <article class="featured__item" data-reveal>
+            <div class="featured__index">
+              <span>02</span>
+            </div>
+            <div class="featured__body">
+              <span class="featured__meta">Geo · Logistics · 2024 — 2026</span>
+              <h3 class="featured__title">Route Intelligence Platform</h3>
+              <p class="featured__desc">
+                A routing &amp; dealer-distance engine that powers smart allocation across the
+                delivery network. Combines Google Routes and OSRM with internal heuristics to
+                pick the right dealer, the right route, and the right ETA for every order —
+                with a self-hosted OSRM fallback for cost and resilience.
+              </p>
+              <ul class="tags">
+                <li>Google Routes API</li><li>OSRM</li><li>Node.js</li><li>MySQL</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 03 -->
+          <article class="featured__item" data-reveal>
+            <div class="featured__index">
+              <span>03</span>
+            </div>
+            <div class="featured__body">
+              <span class="featured__meta">Operations · 2024 — 2026</span>
+              <h3 class="featured__title">Dealer Network Management Portal</h3>
+              <p class="featured__desc">
+                A complete back-office for managing dealers, territories, allocations and
+                performance — the operational heartbeat behind a country-wide home delivery
+                operation. Clean Prisma data model, role-based access, audit trails, and
+                battle-tested workflows used daily by ops teams.
+              </p>
+              <ul class="tags">
+                <li>Next.js</li><li>Node.js</li><li>Express</li><li>MySQL</li><li>Prisma</li><li>Google Maps APIs</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 04 -->
+          <article class="featured__item" data-reveal>
+            <div class="featured__index">
+              <span>04</span>
+            </div>
+            <div class="featured__body">
+              <span class="featured__meta">Payments · Live + Sandbox · 2024 — 2026</span>
+              <h3 class="featured__title">Payment Processing Integration Platform</h3>
+              <p class="featured__desc">
+                Secure payment integration on top of CyberSource Secure Acceptance — split
+                into independent live and sandbox gateway services so multiple delivery
+                products could plug in payments without reinventing tokenisation, retries,
+                reconciliation, or webhook handling. Containerised and deployed via Docker.
+              </p>
+              <ul class="tags">
+                <li>Node.js</li><li>Express</li><li>CyberSource</li><li>Webhooks</li><li>Docker</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 05 -->
+          <article class="featured__item" data-reveal>
+            <div class="featured__index">
+              <span>05</span>
+            </div>
+            <div class="featured__body">
+              <span class="featured__meta">Media · 2024 — 2025</span>
+              <h3 class="featured__title">Podcast Media Distribution Platform</h3>
+              <p class="featured__desc">
+                A streaming and content-delivery platform for premium podcasts. Secure
+                playback via VideoCipher, subscriber management, episode publishing
+                workflows, and a clean editor experience designed for non-technical content teams.
+              </p>
+              <ul class="tags">
+                <li>Node.js</li><li>Express</li><li>MySQL</li><li>Prisma</li><li>VideoCipher</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 06 -->
+          <article class="featured__item" data-reveal>
+            <div class="featured__index">
+              <span>06</span>
+            </div>
+            <div class="featured__body">
+              <span class="featured__meta">Web · CMS · 2024 — 2025</span>
+              <h3 class="featured__title">Content Publishing CMS</h3>
+              <p class="featured__desc">
+                A modern blog and content-publishing CMS — fast Next.js frontend, ergonomic
+                editor experience, Prisma-modelled backend, and a flexible content schema
+                ready for SEO, scheduling and scale.
+              </p>
+              <ul class="tags">
+                <li>Next.js</li><li>Node.js</li><li>MySQL</li><li>Prisma</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- All projects grid -->
+    <section class="section section--alt" id="projects">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <span class="section__eyebrow"><span class="dot"></span>More work</span>
+          <h2 class="section__title">Other systems I've shipped.</h2>
+          <p class="section__lede">
+            A look at additional products and services across delivery, payments, sports,
+            media, hospitality and ops — many actively running in production today.
+          </p>
+        </header>
+
+        <!-- Recent rhythm strip -->
+        <div class="rhythm" data-reveal aria-label="Recent shipping rhythm">
+          <div class="rhythm__head">
+            <span class="rhythm__eyebrow">Recent rhythm</span>
+            <span class="rhythm__caption">Selected client engagements (anonymised), 2024 → 2026</span>
+          </div>
+          <ol class="rhythm__list">
+            <li class="rhythm__item"><span class="rhythm__year">2026</span><span class="rhythm__name">Customer Engagement Platform</span></li>
+            <li class="rhythm__item"><span class="rhythm__year">2026</span><span class="rhythm__name">Home Delivery Admin · v4</span></li>
+            <li class="rhythm__item"><span class="rhythm__year">2026</span><span class="rhythm__name">Salon Management System</span></li>
+            <li class="rhythm__item"><span class="rhythm__year">2025</span><span class="rhythm__name">Wedding Marketplace &amp; Vendor Portal</span></li>
+            <li class="rhythm__item"><span class="rhythm__year">2025</span><span class="rhythm__name">Fitness &amp; Wellness Platform</span></li>
+            <li class="rhythm__item"><span class="rhythm__year">2025</span><span class="rhythm__name">Brand Management Suite</span></li>
+            <li class="rhythm__item"><span class="rhythm__year">2025</span><span class="rhythm__name">License Management Platform</span></li>
+            <li class="rhythm__item"><span class="rhythm__year">2025</span><span class="rhythm__name">HR Management System</span></li>
+            <li class="rhythm__item"><span class="rhythm__year">2024</span><span class="rhythm__name">CCTV / Camera Admin Platform</span></li>
+            <li class="rhythm__item"><span class="rhythm__year">2024</span><span class="rhythm__name">Premium Podcast Streaming Platform</span></li>
+          </ol>
+        </div>
+
+        <div class="grid" data-reveal>
+          <article class="card">
+            <h3 class="card__title">Customer Engagement Platform</h3>
+            <p class="card__desc">A QR-driven platform with separate admin and end-user apps, sharing a single Express + Prisma backbone.</p>
+            <ul class="tags tags--sm"><li>Node.js</li><li>Express</li><li>Prisma</li><li>MySQL</li></ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Wedding Marketplace &amp; Vendor Portal</h3>
+            <p class="card__desc">Two-sided wedding planning platform — a couples app plus a vendor portal for service providers and bookings.</p>
+            <ul class="tags tags--sm"><li>Next.js</li><li>Node.js</li><li>Prisma</li><li>MySQL</li></ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Fitness &amp; Wellness Platform</h3>
+            <p class="card__desc">Workout and nutrition tracking platform with a Prisma 7 data model and a modern Express-based API.</p>
+            <ul class="tags tags--sm"><li>Node.js</li><li>Express</li><li>Prisma 7</li><li>MySQL</li></ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Salon Management System</h3>
+            <p class="card__desc">Appointments, staff and billing management for salons — scheduling, services, customers and reporting.</p>
+            <ul class="tags tags--sm"><li>Next.js</li><li>Node.js</li><li>Prisma</li><li>MySQL</li></ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">HR Management System</h3>
+            <p class="card__desc">In-house HR platform for a delivery operation — employee records, attendance, leave and operational HR workflows.</p>
+            <ul class="tags tags--sm"><li>Node.js</li><li>Express</li><li>Prisma 7</li><li>MySQL</li></ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">License Management Platform</h3>
+            <p class="card__desc">Centralised license issuance, renewal and validation system supporting multiple downstream products.</p>
+            <ul class="tags tags--sm"><li>Node.js</li><li>Express</li><li>Prisma</li><li>MySQL</li></ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Brand Management Suite</h3>
+            <p class="card__desc">Multi-tenant brand &amp; campaign management tooling with role-based admin and content workflows.</p>
+            <ul class="tags tags--sm"><li>Next.js</li><li>Node.js</li><li>Prisma</li><li>MySQL</li></ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Cricket Tournament Management</h3>
+            <p class="card__desc">A full cricket-tournament platform — fixtures, scoring, teams, players and live result updates.</p>
+            <ul class="tags tags--sm"><li>Next.js</li><li>Node.js</li><li>Prisma</li><li>MySQL</li></ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">CCTV / Camera Admin Platform</h3>
+            <p class="card__desc">Web admin for managing CCTV deployments at scale — devices, dealers, and operational reporting.</p>
+            <ul class="tags tags--sm"><li>Node.js</li><li>Express</li><li>MySQL</li></ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Customer Mobile Ordering App</h3>
+            <p class="card__desc">Hybrid mobile ordering experience for end customers, talking to the platform via a clean REST API.</p>
+            <ul class="tags tags--sm"><li>Framework7</li><li>Capacitor</li><li>REST API</li></ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Digital Receipt &amp; Billing Platform</h3>
+            <p class="card__desc">Mobile billing app with Bluetooth thermal-printer integration for in-field receipt printing.</p>
+            <ul class="tags tags--sm"><li>Mobile</li><li>Thermal Printers</li><li>Node.js</li></ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Auth &amp; Session Framework</h3>
+            <p class="card__desc">A reusable authentication framework with JWT access tokens and rotating refresh tokens, used across products.</p>
+            <ul class="tags tags--sm"><li>JWT</li><li>Refresh Tokens</li><li>Node.js</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <span class="section__eyebrow"><span class="dot"></span>Experience</span>
+          <h2 class="section__title">A decade of <span class="grad-text">shipping software.</span></h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item" data-reveal>
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <span class="timeline__date">Mar 2016 — Present</span>
+              <span class="timeline__where">Colombo, LK</span>
+            </div>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Software Engineer · <span>Fixel Inc.</span></h3>
+              <p>
+                Designed and shipped a portfolio of production systems across delivery,
+                payments, CMS and media — from enterprise gas distribution and dealer
+                networks to mobile billing, route optimization, podcast streaming, and
+                a long list of client builds in hospitality, fitness, sports and SaaS.
+                Owned features end-to-end across backend, frontend and mobile.
+              </p>
+              <ul class="timeline__bullets">
+                <li>Architected and led delivery for a national LP-gas distribution platform — backend (v3) and the v4 admin migration on Next.js + Prisma — powering thousands of daily orders.</li>
+                <li>Built a routing engine combining Google Routes &amp; self-hosted OSRM for dealer allocation and ETAs.</li>
+                <li>Integrated CyberSource Secure Acceptance across separate live and sandbox payment gateways for the home-delivery stack, containerised with Docker.</li>
+                <li>Shipped hybrid mobile apps using Framework7 + Capacitor for ordering and field billing with thermal-printer integrations.</li>
+                <li>Designed an internal HR management system and a centralised license-management service used across multiple downstream products.</li>
+                <li>Recent (2025–2026) client builds spanning a customer engagement platform, a two-sided wedding marketplace, a fitness &amp; wellness platform, a salon management system, a brand management suite, a CCTV admin platform, and cricket &amp; rugby tournament platforms.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item" data-reveal>
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <span class="timeline__date">Nov 2015 — Feb 2016</span>
+              <span class="timeline__where">Colombo, LK</span>
+            </div>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Web Application Developer · <span>Dsquare Technologies</span></h3>
+              <p>
+                First professional role — built web applications and learned the
+                fundamentals of full-stack development, deployment, and shipping software
+                to real users.
+              </p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="edu" data-reveal>
+          <h3 class="edu__title">Education</h3>
+          <ul class="edu__list">
+            <li>
+              <strong>Master's in Project Management</strong>
+              <span>Asia e University · 2022</span>
             </li>
-            <li class="l-section section">
-              <div class="work">
-                <h2>Done & Experience</h2>
-                <div class="work--lockup">
-                  <ul class="slider">
-                    <li class="slider--item slider--item-left">
-                      <a href="#0">
-                        <div class="slider--item-image">
-                          <img src="assets/img/work/patta-tours.png" alt="Patta Tours">
-                        </div>
-                        <p class="slider--item-title">Patta Tours</p>
-                        <p class="slider--item-description">Website of local travel and tours agency.</p>
-                        <p class="slider--item-description"> <button class="header--cta cta" onclick="window.open('https://pattatours.lk')"> Visit </button> </p>
-                      </a>
-                    </li>
-                    <li class="slider--item slider--item-center">
-                      <a href="#0">
-                        <div class="slider--item-image">
-                          <img src="assets/img/work/api-dev.png" alt="API Development">
-                        </div>
-                        <p class="slider--item-title">API &amp; Development</p>
-                        <p class="slider--item-description">Fast and secure api development. 7 Years of Experience.</p>
-                      </a>
-                    </li>
-                    <li class="slider--item slider--item-right">
-                      <a href="#0">
-                        <div class="slider--item-image">
-                          <img src="assets/img/work/dev-ops.png" alt="Dev Ops">
-                        </div>
-                        <p class="slider--item-title">Dev Ops</p>
-                        <p class="slider--item-description">Deploy your applications to the next level.</p>
-                      </a>
-                    </li>
-                  </ul>
-                  <div class="slider--prev">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                      <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                        <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
-                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
-                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z" />
-                      </g>
-                    </svg>
-                  </div>
-                  <div class="slider--next">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                      <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                        <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </div>
+            <li>
+              <strong>G.C.E. Advanced Level — Science</strong>
+              <span>Dharmapala Vidyalaya, Pannipitiya · 2015</span>
             </li>
-            <li class="l-section section">
-              <div class="about">
-                <div class="about--banner">
-                  <h2>I<br>believe in<br>passionate<br>work</h2>
-                  <a href="#0">Career
-                    <span>
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                        <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                          <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
-                        </g>
-                      </svg>
-                    </span>
-                  </a>
-                  <img src="assets/img/about-visual.png" alt="About Me">
-                </div>
-                <div class="about--options">
-                  <a href="#0">
-                    <h3>Passionate</h3>
-                  </a>
-                  <a href="#0">
-                    <h3>Skilled</h3>
-                  </a>
-                  <a href="#0">
-                    <h3>Innovative</h3>
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li class="l-section section">
-              <div class="contact">
-                <div class="contact--lockup">
-                  <div class="modal">
-                    <div class="modal--information">
-                      <p>Athurugiriya, Colombo , Sri Lanka</p>
-                      <a href="mailto:kanchanag@fixel.lk">kanchanag@fixel.lk</a>
-                      <a href="tel:+148126287560">+ 94 71 771 1587</a>
-                    </div>
-                    <ul class="modal--options">
-                      <li><a target="_blank" href="https://www.facebook.com/Kanchana.Nuradha.666/"> <i class="fa fa-facebook"></i> - Facebook</a></li>
-                      <li><a target="_blank" href="https://www.linkedin.com/in/kanchana-nuradha-0bab099b?originalSubdomain=lk"> <i class="fa fa-linkedin"></i> - LinkedIn</a></li>
-                      <li><a target="_blank" href="https://kanchananuradha.github.io/"> <i class="fa fa-github"></i> - Git Hub</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="l-section section">
-              <div class="hire">
-                <h2>You want me to do</h2>
-                <!-- checkout formspree.io for easy form setup -->
-                <form class="work-request">
-                  <input type="submit" value="Just send a Request" onclick="window.open('mailto:kanchanag@fixel.lk')">
-                </form>
-              </div>
+            <li>
+              <strong>G.C.E. Ordinary Level — 9A's</strong>
+              <span>Dharmapala Vidyalaya, Pannipitiya · 2009</span>
             </li>
           </ul>
         </div>
       </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <div class="contact" data-reveal>
+          <header class="contact__head">
+            <span class="section__eyebrow"><span class="dot"></span>Contact</span>
+            <h2 class="contact__title">
+              Let's build<br/>
+              <span class="grad-text">something solid.</span>
+            </h2>
+            <p class="contact__lede">
+              Open to interesting full-stack engagements, technical consulting,
+              and delivery-tech / logistics problems. The fastest way to reach me is email.
+            </p>
+          </header>
+
+          <div class="contact__grid">
+            <a class="contact__card" href="mailto:kanchanag@fixel.lk">
+              <span class="contact__card-label">Work email</span>
+              <span class="contact__card-value">kanchanag@fixel.lk</span>
+              <span class="contact__card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </a>
+
+            <a class="contact__card" href="mailto:kanchanarx@gmail.com">
+              <span class="contact__card-label">Personal email</span>
+              <span class="contact__card-value">kanchanarx@gmail.com</span>
+              <span class="contact__card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </a>
+
+            <a class="contact__card" href="tel:+94717711587">
+              <span class="contact__card-label">Phone</span>
+              <span class="contact__card-value">+94 71 771 1587</span>
+              <span class="contact__card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </a>
+
+            <a class="contact__card" href="https://www.google.com/maps?q=Athurugiriya,+Sri+Lanka" target="_blank" rel="noopener">
+              <span class="contact__card-label">Base location</span>
+              <span class="contact__card-value">Athurugiriya, Sri Lanka</span>
+              <span class="contact__card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </a>
+
+            <a class="contact__card" href="https://www.linkedin.com/in/kanchana-nuradha-0bab099b" target="_blank" rel="noopener">
+              <span class="contact__card-label">LinkedIn</span>
+              <span class="contact__card-value">in/kanchana-nuradha</span>
+              <span class="contact__card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </a>
+
+            <a class="contact__card" href="https://github.com/KanchanaNuradha" target="_blank" rel="noopener">
+              <span class="contact__card-label">GitHub</span>
+              <span class="contact__card-value">@KanchanaNuradha</span>
+              <span class="contact__card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__mark">KN</span>
+        <span>Kanchana Nuradha Galappaththi</span>
+      </div>
+      <div class="footer__meta">
+        <span>© <span id="year"></span> · Athurugiriya, Sri Lanka</span>
+        <span class="footer__sep" aria-hidden="true">·</span>
+        <span>Built with Vanilla &amp; care.</span>
+      </div>
     </div>
-    <ul class="outer-nav">
-      <li class="is-active">Home</li>
-      <li>Works</li>
-      <li>About</li>
-      <li>Contact</li>
-      <li>Hire Me</li>
-    </ul>
-  </div>
+  </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script>
-    window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')
-  </script>
-  <script src="assets/js/functions-min.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
-
 </html>
