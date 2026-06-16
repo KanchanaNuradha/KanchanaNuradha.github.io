@@ -1,34 +1,6 @@
 (() => {
   'use strict';
 
-  const root = document.documentElement;
-
-  /* ---------- Theme ---------- */
-  const THEME_KEY = 'kn-theme';
-  const applyTheme = (theme) => {
-    root.setAttribute('data-theme', theme);
-    const color = theme === 'light' ? '#f7f7fb' : '#07070b';
-    document
-      .querySelectorAll('meta[name="theme-color"]')
-      .forEach((m) => m.setAttribute('content', color));
-  };
-
-  const stored = (() => {
-    try { return localStorage.getItem(THEME_KEY); } catch { return null; }
-  })();
-  const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-  applyTheme(stored || (prefersLight ? 'light' : 'dark'));
-
-  const themeToggle = document.getElementById('themeToggle');
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme') || 'dark';
-      const next = current === 'dark' ? 'light' : 'dark';
-      applyTheme(next);
-      try { localStorage.setItem(THEME_KEY, next); } catch {}
-    });
-  }
-
   /* ---------- Nav: scroll state + burger ---------- */
   const nav = document.getElementById('nav');
   const burger = document.getElementById('navBurger');
