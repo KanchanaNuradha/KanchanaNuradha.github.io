@@ -1133,3 +1133,208 @@ h1, h2, h3, h4, p { margin: 0; }
   .hero__stats { grid-template-columns: 1fr; }
   .hero__stats .hero__stat:last-child { grid-column: auto; }
 }
+
+/* ============================================================
+   PRINT / PDF — preserve the dark portfolio look on paper.
+   Use Chrome / Brave / Edge → Print → "Save as PDF",
+   make sure "Background graphics" is ON.
+   ============================================================ */
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm 12mm;
+  }
+
+  :root {
+    --nav-h: 0px;
+    --gutter: 0;
+    --container: 100%;
+  }
+
+  html, body {
+    background: #07070b !important;
+    color: #e8e8ee !important;
+    font-size: 11pt;
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Always show all decorations in PDF */
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Strip chrome / animations / interactive bits */
+  .nav,
+  .nav__burger,
+  .hero__scroll,
+  .hero__status,
+  .contact__card-arrow,
+  .btn svg,
+  .hero__actions .btn--ghost svg,
+  .nav__cta {
+    display: none !important;
+  }
+
+  .bg-grid,
+  .bg-glow {
+    display: none !important;
+  }
+
+  /* Keep a soft gradient washing across pages */
+  .bg-blanket {
+    position: fixed !important;
+    inset: 0 !important;
+    background-image:
+      radial-gradient(900px 700px at 50% -10%, rgba(124, 92, 255, 0.35), transparent 70%),
+      radial-gradient(700px 500px at 100% 0%, rgba(34, 211, 238, 0.20), transparent 75%);
+    opacity: 1;
+  }
+
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Hero adjustments for paper */
+  .hero {
+    min-height: auto !important;
+    padding: 0 0 8mm !important;
+    page-break-after: avoid;
+  }
+  .hero__inner { gap: 6pt !important; }
+  .hero__title { font-size: 28pt !important; line-height: 1.05 !important; }
+  .hero__title-line--sub { font-size: 16pt !important; }
+  .hero__lede { font-size: 11pt !important; max-width: 100% !important; }
+  .hero__actions { gap: 8pt !important; flex-wrap: wrap !important; }
+  .hero__actions .btn {
+    padding: 4pt 8pt !important;
+    font-size: 9.5pt !important;
+    border-radius: 6pt !important;
+    background: transparent !important;
+    color: #e8e8ee !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(255,255,255,0.18) !important;
+  }
+  .hero__actions .btn--primary {
+    background: linear-gradient(135deg, #7c5cff 0%, #22d3ee 100%) !important;
+    color: #0a0a0f !important;
+    border: none !important;
+  }
+  .hero__stats {
+    margin-top: 10pt !important;
+    padding-top: 8pt !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 6pt 14pt !important;
+  }
+  .hero__stat dd { font-size: 16pt !important; }
+
+  /* Section rhythm */
+  .section {
+    padding: 8mm 0 !important;
+    page-break-inside: avoid;
+  }
+  .section--alt { background: transparent !important; }
+  .section__head { margin-bottom: 6mm !important; gap: 4pt !important; }
+  .section__head--row { grid-template-columns: 1fr !important; gap: 4pt !important; }
+  .section__title { font-size: 18pt !important; line-height: 1.1 !important; }
+  .section__lede { font-size: 10.5pt !important; }
+  .section__eyebrow { font-size: 8pt !important; letter-spacing: 0.15em !important; }
+
+  h2, h3 { page-break-after: avoid; }
+
+  /* About */
+  .about { grid-template-columns: 1.4fr 1fr !important; gap: 6mm !important; }
+  .about__copy { font-size: 10.5pt !important; gap: 6pt !important; }
+  .about__card { padding: 8pt 10pt !important; }
+  .about__facts li { font-size: 9.5pt !important; padding-bottom: 4pt !important; }
+
+  /* Skills — keep grid but tighter */
+  .skills { grid-template-columns: repeat(3, 1fr) !important; gap: 6pt !important; page-break-inside: avoid; }
+  .skill-card { padding: 8pt 9pt !important; page-break-inside: avoid; }
+  .skill-card h3 { font-size: 10.5pt !important; }
+  .skill-card__num { font-size: 8pt !important; }
+  .skill-list li {
+    font-size: 8pt !important;
+    padding: 2pt 5pt !important;
+  }
+
+  /* Featured projects */
+  .featured__item {
+    grid-template-columns: 36pt 1fr !important;
+    gap: 8pt !important;
+    padding: 7pt 0 !important;
+    page-break-inside: avoid;
+  }
+  .featured__item:hover { padding-left: 0 !important; }
+  .featured__item::after { display: none !important; }
+  .featured__meta { font-size: 7.5pt !important; margin-bottom: 2pt !important; }
+  .featured__title { font-size: 12.5pt !important; margin-bottom: 3pt !important; }
+  .featured__desc { font-size: 10pt !important; max-width: 100% !important; margin-bottom: 4pt !important; }
+  .featured__index span { padding-top: 3pt !important; }
+
+  /* Rhythm strip */
+  .rhythm { padding: 8pt 10pt 4pt !important; margin-bottom: 6mm !important; page-break-inside: avoid; }
+  .rhythm__head { margin-bottom: 4pt !important; }
+  .rhythm__caption { font-size: 8.5pt !important; }
+  .rhythm__item { font-size: 8.5pt !important; padding: 2pt 6pt 2pt 3pt !important; }
+  .rhythm__year { font-size: 7.5pt !important; padding: 1pt 4pt !important; }
+
+  /* Other systems grid */
+  .grid { grid-template-columns: repeat(3, 1fr) !important; gap: 6pt !important; }
+  .card { padding: 8pt 10pt !important; page-break-inside: avoid; }
+  .card::after { display: none !important; }
+  .card__title { font-size: 10.5pt !important; }
+  .card__desc { font-size: 9pt !important; }
+
+  .tags li, .tags--sm li {
+    font-size: 7.5pt !important;
+    padding: 1pt 5pt !important;
+  }
+
+  /* Experience timeline */
+  .timeline__item {
+    grid-template-columns: 140pt 1fr !important;
+    gap: 8pt !important;
+    padding: 8pt 0 !important;
+    page-break-inside: avoid;
+  }
+  .timeline__marker { top: 12pt !important; }
+  .timeline__date { font-size: 9pt !important; }
+  .timeline__where { font-size: 7.5pt !important; }
+  .timeline__title { font-size: 12pt !important; margin-bottom: 3pt !important; }
+  .timeline__body p { font-size: 10pt !important; max-width: 100% !important; }
+  .timeline__bullets { gap: 2pt !important; margin-top: 4pt !important; }
+  .timeline__bullets li { font-size: 9.5pt !important; padding-left: 10pt !important; line-height: 1.45 !important; }
+
+  /* Education */
+  .edu { padding: 10pt 12pt !important; margin-top: 8mm !important; page-break-inside: avoid; }
+  .edu__title { font-size: 8pt !important; margin-bottom: 6pt !important; }
+  .edu__list { grid-template-columns: 1fr 1fr !important; gap: 6pt 12pt !important; }
+  .edu__list strong { font-size: 10pt !important; }
+  .edu__list span { font-size: 9pt !important; }
+
+  /* Contact */
+  .section--contact { padding-bottom: 8mm !important; }
+  .contact { padding: 10pt 12pt !important; page-break-inside: avoid; }
+  .contact::before { opacity: 0.5 !important; }
+  .contact__head { margin-bottom: 8pt !important; gap: 4pt !important; }
+  .contact__title { font-size: 18pt !important; }
+  .contact__lede { font-size: 10pt !important; }
+  .contact__grid { grid-template-columns: repeat(3, 1fr) !important; gap: 6pt !important; }
+  .contact__card { padding: 7pt 9pt !important; }
+  .contact__card-label { font-size: 7.5pt !important; }
+  .contact__card-value { font-size: 10pt !important; }
+
+  /* Footer */
+  .footer { padding: 6mm 0 0 !important; page-break-inside: avoid; }
+  .footer__inner { font-size: 8.5pt !important; }
+  .footer__mark { width: 18pt !important; height: 18pt !important; font-size: 7pt !important; }
+
+  /* Make sure links don't show URLs in print */
+  a[href]:after { content: none !important; }
+}
