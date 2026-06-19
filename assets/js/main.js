@@ -1,10 +1,8 @@
 (() => {
   'use strict';
 
-  /* ---------- Nav: scroll state + burger ---------- */
+  /* ---------- Nav: scroll state ---------- */
   const nav = document.getElementById('nav');
-  const burger = document.getElementById('navBurger');
-  const navLinksWrap = document.querySelector('.nav__links');
   const navLinks = Array.from(document.querySelectorAll('.nav__links a[data-nav]'));
 
   const onScroll = () => {
@@ -13,21 +11,6 @@
   };
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
-
-  if (burger && navLinksWrap) {
-    burger.addEventListener('click', () => {
-      const open = navLinksWrap.classList.toggle('is-open');
-      burger.classList.toggle('is-open', open);
-      burger.setAttribute('aria-expanded', String(open));
-    });
-    navLinksWrap.addEventListener('click', (e) => {
-      if (e.target.matches('a')) {
-        navLinksWrap.classList.remove('is-open');
-        burger.classList.remove('is-open');
-        burger.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
 
   /* ---------- Active nav link via IntersectionObserver ---------- */
   const sectionIds = navLinks.map(a => a.getAttribute('href')).filter(Boolean);
